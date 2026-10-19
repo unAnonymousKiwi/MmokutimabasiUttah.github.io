@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en-NG">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mmokutimabasi Uttah | Content and Growth Specialist</title>
+  <meta name="description" content="Content and growth specialist in SEO, editorial and audience strategy. Since 2022 I have created content for B2B technology, fintech, agritech, e-commerce and creative brands.">
+  <meta property="og:title" content="Mmokutimabasi Uttah | Content and Growth Specialist">
+  <meta property="og:description" content="SEO content that gets brands found and keeps readers reading.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#3A2632">
+  <!-- Empty favicon stops the browser requesting a missing file. Swap in your own later. -->
+  <link rel="icon" href="data:,">
+
+  <!-- Tailwind via CDN, pinned to an exact version -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    // Colour tokens. Deep aubergine and soft linen, with lilac and mustard accents.
+    // Lilac is too light for text or borders on linen, so it is used for buttons, nav links on dark areas, highlights and tints.
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: '#F5F2EB',
+            ink: '#3A2632',
+            lilac: '#C8B8D1',
+            mustard: '#E2C792',
+            'lilac-tint': '#EBE4EF',
+            mist: '#E9E1EE',
+            muted: '#5B4A55'
+          },
+          fontFamily: {
+            display: ['Georgia', '"Times New Roman"', 'serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Keyboard focus: aubergine on light sections, mustard on dark sections */
+    :focus-visible { outline: 3px solid #3A2632; outline-offset: 3px; }
+    .dark-zone :focus-visible { outline-color: #E2C792; }
+
+    /* BUTTON START: pill shape, serif italic, offset shadow, playful tilt */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 48px; padding: 0.6rem 1.75rem;
+      background: #C8B8D1; color: #3A2632;
+      font-family: Georgia, "Times New Roman", serif; font-style: italic; font-weight: 700; font-size: 1.125rem;
+      border: 2px solid #3A2632; border-radius: 999px;
+      box-shadow: 4px 4px 0 #3A2632; cursor: pointer;
+    }
+    .btn:active { transform: translate(2px, 2px); box-shadow: none; }
+    .dark-zone .btn { border-color: #C8B8D1; box-shadow: 4px 4px 0 #E2C792; }
+    .btn-dark { background: #3A2632; color: #E2C792; box-shadow: 4px 4px 0 #C8B8D1; }
+    .dark-zone nav a { color: #C8B8D1; }
+    .dark-zone nav a:hover { color: #F5F2EB; }
+    /* Highlighter stroke behind the result numbers */
+    .mark { background: linear-gradient(transparent 62%, #C8B8D1 62%); padding: 0 0.15em; }
+    /* BUTTON END */
+
+    /* Project fact lists */
+    .facts dt { font-weight: 700; color: #3A2632; margin-top: 1rem; }
+    .facts dt:first-child { margin-top: 0; }
+    .facts dd { margin: 0.25rem 0 0; color: #5B4A55; }
+
+    /* Form fields */
+    .field {
+      display: block; width: 100%; min-height: 44px; padding: 0.5rem 0.75rem;
+      background: #fff; color: #3A2632;
+      border: 2px solid #5B4A55; border-radius: 0.5rem;
+    }
+
+    /* Motion only for visitors who allow it */
+    @media (prefers-reduced-motion: no-preference) {
+      html { scroll-behavior: smooth; }
+      .btn { transition: transform 0.2s; }
+      .btn:hover { transform: translateY(-2px) rotate(-1.5deg); }
+    }
+  </style>
+</head>
+
+<body class="bg-paper text-ink font-sans text-base leading-relaxed">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-paper focus:p-3 focus:text-ink">Skip to main content</a>
+
+  <!-- Header and navigation -->
+  <header class="bg-ink text-paper dark-zone border-b border-white/10">
+    <div class="max-w-5xl mx-auto px-5 py-2 flex flex-wrap items-center justify-between gap-x-6">
+      <a href="#top" class="font-display text-lg font-bold min-h-11 inline-flex items-center">Mmokutimabasi Uttah</a>
+      <nav aria-label="Primary">
+        <ul class="flex flex-wrap gap-x-5 text-sm">
+          <li><a href="#about" class="min-h-11 inline-flex items-center hover:underline underline-offset-4">About</a></li>
+          <li><a href="#projects" class="min-h-11 inline-flex items-center hover:underline underline-offset-4">Projects</a></li>
+          <li><a href="#writing" class="min-h-11 inline-flex items-center hover:underline underline-offset-4">Writing</a></li>
+          <li><a href="#skills" class="min-h-11 inline-flex items-center hover:underline underline-offset-4">Skills</a></li>
+          <li><a href="#contact" class="min-h-11 inline-flex items-center hover:underline underline-offset-4">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero: who I am, what I do, who I help, one call to action -->
+    <section id="top" aria-labelledby="hero-title" class="bg-ink text-paper dark-zone">
+      <div class="max-w-5xl mx-auto px-5 pt-12 pb-16 md:pt-20 md:pb-24">
+        <h1 id="hero-title" class="font-display text-4xl md:text-6xl font-bold leading-tight max-w-3xl">
+          Your brand deserves better than page ten of Google.
+        </h1>
+        <p class="text-lg md:text-xl mt-6 max-w-2xl text-mist">
+          I am Mmokutimabasi Uttah, a content and growth specialist. I plan and create SEO content for tech, fintech, agritech and e-commerce brands.
+        </p>
+        <a href="#contact" class="btn mt-8">Let us fix that</a>
+      </div>
+    </section>
+
+    <!-- Results strip -->
+    <section aria-label="Selected results" class="py-12">
+      <ul class="max-w-5xl mx-auto px-5 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <li>
+          <span class="inline-block mark font-display text-4xl font-bold text-ink">$7,000+</span>
+          <span class="block mt-1 text-muted">in luxury bag sales, with my copy on the job</span>
+          <span class="block text-sm font-bold text-ink">Luxcross</span>
+        </li>
+        <li>
+          <span class="inline-block mark font-display text-4xl font-bold text-ink">20+</span>
+          <span class="block mt-1 text-muted">paintings sold, with my editorial and product content behind them</span>
+          <span class="block text-sm font-bold text-ink">BetterShared</span>
+        </li>
+        <li>
+          <span class="inline-block mark font-display text-4xl font-bold text-ink">Over 3</span>
+          <span class="block mt-1 text-muted">clients given a team and projects delivered within a year</span>
+          <span class="block text-sm font-bold text-ink">WebuildX</span>
+        </li>
+        <li>
+          <span class="inline-block mark font-display text-4xl font-bold text-ink">80%</span>
+          <span class="block mt-1 text-muted">lift in audience engagement within two months, across Discord, X and more</span>
+          <span class="block text-sm font-bold text-ink">Lynkk</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- About -->
+    <section id="about" aria-labelledby="about-title" class="pb-16">
+      <div class="max-w-5xl mx-auto px-5 grid gap-10 md:grid-cols-[2fr_1fr] items-center">
+        <div>
+          <h2 id="about-title" class="font-display text-3xl md:text-4xl font-bold text-ink">Plants, pests and page one</h2>
+          <p class="mt-6 max-w-prose">I am finishing a BSc in Crop Protection and Environmental Biology at the University of Ibadan. Yes, I study plants and pests. No, that has not stopped me obsessing over keywords.</p>
+          <p class="mt-4 max-w-prose">Since 2022 I have created content for tech, fintech, agritech, e-commerce and creative brands. I begin with what people actually type into Google, publish, then check the numbers. When my instinct and the data disagree, I side with the data.</p>
+          <p class="mt-4 max-w-prose">Off the clock, I am a bookworm and weeb who runs the Jollof and Fiction book club and dabbles in unsolicited meandering.</p>
+          <a href="resume/Mmokutimabasi-Uttah-Resume.pdf" download class="mt-4 min-h-11 inline-flex items-center font-bold text-ink underline underline-offset-4">Grab my resume (PDF)</a>
+        </div>
+        <img src="images/portrait.webp" width="600" height="600" loading="lazy"
+          alt="Portrait of Mmokutimabasi Uttah smiling, wearing round glasses and resting the chin on both hands"
+          class="w-full max-w-xs h-auto rounded-full border-4 border-ink mx-auto md:mx-0">
+      </div>
+    </section>
+
+    <!-- Projects: problem, role, process, tools, outcome -->
+    <section id="projects" aria-labelledby="projects-title" class="py-16 bg-lilac-tint">
+      <div class="max-w-5xl mx-auto px-5">
+        <h2 id="projects-title" class="font-display text-3xl md:text-4xl font-bold text-ink">Work I am proud of</h2>
+        <div class="mt-10 grid gap-8 md:grid-cols-3">
+        <article class="flex flex-col">
+          <img src="images/cover-luxcross.webp" width="1200" height="592" loading="lazy" alt="Luxcross home page showing Bags of the Day, with Chanel and Hermes listings" class="w-full aspect-[16/10] object-cover rounded-2xl border-2 border-ink object-left">
+          <h3 class="mt-4 font-display text-2xl font-bold text-ink">Luxcross</h3>
+          <p class="mt-2">Luxury bags that only sold in person in Dubai. I gave the website a voice, and buyers worldwide started finding it.</p>
+          <a href="luxcross.html" class="mt-2 min-h-11 inline-flex items-center font-bold text-ink underline underline-offset-4">Nerd out here</a>
+        </article>
+        <article class="flex flex-col">
+          <img src="images/cover-webuildx.webp" width="738" height="387" loading="lazy" alt="WebuildX logo with the line The builders behind the builders" class="w-full aspect-[16/10] object-cover rounded-2xl border-2 border-ink">
+          <h3 class="mt-4 font-display text-2xl font-bold text-ink">WebuildX</h3>
+          <p class="mt-2">An engineering talent company with no website at all. The team and I built it from scratch, created the copy and grew search through blog posts readers came back for.</p>
+          <a href="webuildx.html" class="mt-2 min-h-11 inline-flex items-center font-bold text-ink underline underline-offset-4">Nerd out here</a>
+        </article>
+        <article class="flex flex-col">
+          <img src="images/cover-orange-farm.webp" width="659" height="466" loading="lazy" alt="A farmer tending young plants in a greenhouse beside the words Farm without limits and the Orange Farm Tech logo" class="w-full aspect-[16/10] object-cover rounded-2xl border-2 border-ink">
+          <h3 class="mt-4 font-display text-2xl font-bold text-ink">Orange Farm Technologies</h3>
+          <p class="mt-2">A smart farm needed one site for buyers, investors and trainees. One month and a brief that keeps on giving.</p>
+          <a href="orange-farm.html" class="mt-2 min-h-11 inline-flex items-center font-bold text-ink underline underline-offset-4">Nerd out here</a>
+        </article>
+        </div>
+        <a href="projects.html" class="mt-10 min-h-11 inline-flex items-center font-bold text-ink underline underline-offset-4">See every project</a>
+      </div>
+    </section>
+
+    <!-- Call to action: choose me -->
+    <section aria-label="Work with me" class="bg-ink text-paper dark-zone">
+      <div class="max-w-5xl mx-auto px-5 py-10 flex justify-center">
+        <a href="#contact" class="btn">Choose me</a>
+      </div>
+    </section>
+
+    <!-- Writing samples -->
+    <section id="writing" aria-labelledby="writing-title" class="pt-16">
+      <div class="max-w-5xl mx-auto px-5">
+        <h2 id="writing-title" class="font-display text-3xl md:text-4xl font-bold text-ink">Writing samples</h2>
+        <p class="mt-4 max-w-prose text-muted">Read a few and judge for yourself.</p>
+        <div class="mt-8 grid gap-8 md:grid-cols-2">
+          <div>
+            <h3 class="font-display text-xl font-bold">Luxcross</h3>
+            <ul class="mt-3 space-y-4">
+              <li>
+                <a href="https://www.luxcross.com/blog/chanel-classic-flap-vs-boy-bag-comparison" rel="noopener" class="min-h-11 inline-flex items-center font-bold text-ink underline underline-offset-4">Chanel Classic Flap vs. Chanel Boy Bag: Which One Suits Your Style?</a>
+                <span class="block text-muted">Two Chanel icons compared on style, function and resale value.</span>
+              </li>
+              <li>
+                <a href="https://www.luxcross.com/blog/chanel-coco-handle-vs-classic-flap" rel="noopener" class="min-h-11 inline-flex items-center font-bold text-ink underline underline-offset-4">Chanel Coco Handle vs. Chanel Classic Flap: Which One Fits Your Lifestyle?</a>
+                <span class="block text-muted">Picks the right bag for workdays and for evenings out.</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-display text-xl font-bold">Lynkk</h3>
+            <ul class="mt-3 space-y-4">
+              <li>
+                <a href="https://medium.com/@lynkkhq/stablecoins-what-are-they-really-f99bb4e4c216" rel="noopener" class="min-h-11 inline-flex items-center font-bold text-ink underline underline-offset-4">Stablecoins: What Are They Really?</a>
+                <span class="block text-muted">Crypto that behaves itself, explained simply.</span>
+              </li>
+              <li>
+                <a href="https://medium.com/@lynkkhq/the-struggle-of-the-naira-b8f7070802b7" rel="noopener" class="min-h-11 inline-flex items-center font-bold text-ink underline underline-offset-4">The Struggle of the Naira</a>
+                <span class="block text-muted">A plain-spoken look at the naira’s fall.</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-display text-xl font-bold">WebuildX</h3>
+            <ul class="mt-3 space-y-4">
+              <li>
+                <a href="https://medium.com/@webuildx1/how-to-build-a-strong-digital-presence-for-your-brand-b484e6b52247" rel="noopener" class="min-h-11 inline-flex items-center font-bold text-ink underline underline-offset-4">How to Build a Strong Digital Presence for Your Brand</a>
+                <span class="block text-muted">How to show up where your customers are already looking.</span>
+              </li>
+              <li>
+                <a href="https://medium.com/@webuildx1/create-your-business-plan-in-2025-with-9-essential-tips-5e1c19cd2cd2" rel="noopener" class="min-h-11 inline-flex items-center font-bold text-ink underline underline-offset-4">Create Your Business Plan in 2025 with 9 Essential Tips</a>
+                <span class="block text-muted">Nine tips for planning your business year.</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-display text-xl font-bold">BetterShared</h3>
+            <ul class="mt-3 space-y-4">
+              <li>
+                <a href="https://bettershared.co/blogs/resources-for-artists/digital-art-for-beginners-essential-tools-techniques-and-tips-to-get-started" rel="noopener" class="min-h-11 inline-flex items-center font-bold text-ink underline underline-offset-4">Digital Art for Beginners: Essential Tools, Techniques, and Tips to Get Started</a>
+                <span class="block text-muted">Digital art for beginners, told through one artist’s story.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills and certifications -->
+    <section id="skills" aria-labelledby="skills-title" class="py-16">
+      <div class="max-w-5xl mx-auto px-5">
+        <h2 id="skills-title" class="font-display text-3xl md:text-4xl font-bold text-ink">My toolbox</h2>
+        <div class="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <h3 class="font-display text-xl font-bold">Content and editorial</h3>
+            <ul class="mt-3 space-y-1 text-muted">
+              <li>Long-form writing</li>
+              <li>Copyediting</li>
+              <li>Technical writing</li>
+              <li>Website copy</li>
+              <li>Product storytelling</li>
+              <li>Email and social content</li>
+              <li>AI content development</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-display text-xl font-bold">Strategy and growth</h3>
+            <ul class="mt-3 space-y-1 text-muted">
+              <li>Content strategy</li>
+              <li>Audience research</li>
+              <li>Brand voice</li>
+              <li>Repurposing and distribution</li>
+              <li>Keyword research</li>
+              <li>On-page SEO</li>
+              <li>Performance analysis</li>
+              <li>Answer engine optimisation (AEO)</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-display text-xl font-bold">Tools and platforms</h3>
+            <p class="mt-3 text-muted"><span class="font-bold">SEO:</span> Semrush, Ahrefs, Google Search Console, Screaming Frog, Moz, Surfer SEO and Ubersuggest.</p>
+            <p class="mt-3 text-muted"><span class="font-bold">Everyday:</span> Google Analytics, Zutrix, Yoast, Framer and Framer CMS, Shopify, WordPress, Medium, Notion, Trello, Canva and Google Workspace.</p>
+          </div>
+          <div>
+            <h3 class="font-display text-xl font-bold">Certifications</h3>
+            <ul class="mt-3 space-y-1 text-muted">
+              <li>HubSpot Content Marketing Certification</li>
+              <li>Google Analytics Certification, Google Skillshop</li>
+              <li>Yoast SEO for Beginners, Yoast Academy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- References: add real references here later -->
+    <section id="references" aria-labelledby="references-title" class="pb-16">
+      <div class="max-w-5xl mx-auto px-5">
+        <h2 id="references-title" class="font-display text-3xl md:text-4xl font-bold text-ink">All hail Mkay!</h2>
+        <p class="mt-4 max-w-prose text-muted">Words from people I have worked with.</p>
+        <div class="mt-8 grid gap-6 md:grid-cols-3">
+          <!-- DRAFT: send this to Joshua Etuk for approval before you publish -->
+          <figure class="rounded-2xl bg-lilac-tint p-6">
+            <blockquote><p>“Leo takes a brief seriously. Complex subjects come back clear and well researched, and deadlines are met without any chasing. I recommend Leo with confidence.”</p></blockquote>
+            <figcaption class="mt-4"><span class="block font-bold text-ink">Joshua Etuk</span><span class="block text-sm text-muted">Forestgreen and Equinix Nigeria</span></figcaption>
+          </figure>
+          <!-- DRAFT: send this to Id for approval before you publish -->
+          <figure class="rounded-2xl bg-lilac-tint p-6">
+            <blockquote><p>“Leo listened closely and wrote about my work with real care. The words felt like mine, only sharper. Easy to work with and professional throughout.”</p></blockquote>
+            <figcaption class="mt-4"><span class="block font-bold text-ink">Id</span><span class="block text-sm text-muted">Artist</span></figcaption>
+          </figure>
+          <!-- DRAFT: send this to Tope for approval before you publish -->
+          <figure class="rounded-2xl bg-lilac-tint p-6">
+            <blockquote><p>“Mmokut understands what a brand needs to say and who needs to hear it. The content was clear, well organised and delivered as promised. A smooth experience from start to finish.”</p></blockquote>
+            <figcaption class="mt-4"><span class="block font-bold text-ink">Tope</span><span class="block text-sm text-muted">Zane Energy</span></figcaption>
+          </figure>
+        </div>
+        <!-- CUSTOMIZE: replace each draft with the person's approved words -->
+      </div>
+    </section>
+
+    <!-- Call to action: pick me -->
+    <section aria-label="Pick me" class="bg-ink text-paper dark-zone">
+      <div class="max-w-5xl mx-auto px-5 py-10 flex flex-wrap items-center justify-between gap-6">
+        <p class="font-display text-2xl md:text-3xl font-bold max-w-xl">I hope you pick greatness.</p>
+        <a href="#contact" class="btn">Pick me</a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" aria-labelledby="contact-title" class="py-16 bg-lilac-tint">
+      <div class="max-w-5xl mx-auto px-5 grid gap-10 md:grid-cols-2">
+        <div>
+          <h2 id="contact-title" class="font-display text-3xl md:text-4xl font-bold text-ink">Say hello</h2>
+          <p class="mt-6 max-w-prose">Tell me what you need and what you want it to achieve. I read every message myself and reply properly.</p>
+          <ul class="mt-4">
+            <li><a href="mailto:mmokutimabasiuttah@gmail.com" class="min-h-11 inline-flex items-center font-bold text-ink underline underline-offset-4">mmokutimabasiuttah@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/mmokutimabasi-uttah" rel="noopener" class="min-h-11 inline-flex items-center font-bold text-ink underline underline-offset-4">LinkedIn profile</a></li>
+          </ul>
+        </div>
+
+        <!-- Sends each message to the Gmail inbox through FormSubmit. Submit once after deploying, then click the confirmation link FormSubmit emails you. -->
+        <form action="https://formsubmit.co/mmokutimabasiuttah@gmail.com" method="post" class="space-y-5 bg-mustard p-6 md:p-8 rounded-3xl">
+          <input type="hidden" name="_subject" value="New enquiry from my portfolio">
+          <div>
+            <label for="name" class="block font-bold mb-1">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required class="field">
+          </div>
+          <div>
+            <label for="email" class="block font-bold mb-1">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required class="field">
+          </div>
+          <div>
+            <label for="service" class="block font-bold mb-1">What do you need?</label>
+            <select id="service" name="service" class="field">
+              <option>SEO content strategy</option>
+              <option>Website or product copy</option>
+              <option>Long-form editorial writing</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div>
+            <label for="message" class="block font-bold mb-1">Message</label>
+            <textarea id="message" name="message" rows="5" required class="field"></textarea>
+          </div>
+          <button type="submit" class="btn btn-dark">Send it my way</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-ink text-paper dark-zone">
+    <div class="max-w-5xl mx-auto px-5 py-8 text-sm">
+      <nav aria-label="Footer">
+        <ul class="flex flex-wrap gap-x-5">
+          <li><a href="#about" class="min-h-11 inline-flex items-center underline underline-offset-4">About</a></li>
+          <li><a href="#projects" class="min-h-11 inline-flex items-center underline underline-offset-4">Projects</a></li>
+          <li><a href="#writing" class="min-h-11 inline-flex items-center underline underline-offset-4">Writing</a></li>
+          <li><a href="#skills" class="min-h-11 inline-flex items-center underline underline-offset-4">Skills</a></li>
+          <li><a href="#references" class="min-h-11 inline-flex items-center underline underline-offset-4">References</a></li>
+          <li><a href="#contact" class="min-h-11 inline-flex items-center underline underline-offset-4">Contact</a></li>
+          <li><a href="#top" class="min-h-11 inline-flex items-center underline underline-offset-4">Back to top</a></li>
+        </ul>
+      </nav>
+      <div class="mt-4 flex flex-wrap items-center justify-between gap-x-6">
+        <p>© <span id="year">2026</span> Mmokutimabasi Uttah. All rights reserved.</p>
+        <a href="resume/Mmokutimabasi-Uttah-Resume.pdf" download class="min-h-11 inline-flex items-center underline underline-offset-4">Download resume</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Keep the footer year current
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

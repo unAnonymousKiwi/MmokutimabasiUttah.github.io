@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-NG">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects</title>
+  <meta name="description" content="Deep dives into my SEO, copywriting and digital strategy work for Luxcross, WebuildX and Orange Farm Technologies, plus two quick stops.">
+  <meta property="og:title" content="Projects">
+  <meta property="og:description" content="Deep dives into my SEO, copywriting and digital strategy work for Luxcross, WebuildX and Orange Farm Technologies, plus two quick stops.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#3A2632">
+  <!-- Empty favicon stops the browser requesting a missing file. Swap in your own later. -->
+  <link rel="icon" href="data:,">
+
+  <!-- Tailwind via CDN, pinned to an exact version -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    // Colour tokens. Deep aubergine and soft linen, with lilac and mustard accents.
+    // Lilac is too light for text or borders on linen, so it is used for buttons, nav links on dark areas, highlights and tints.
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: '#F5F2EB',
+            ink: '#3A2632',
+            lilac: '#C8B8D1',
+            mustard: '#E2C792',
+            'lilac-tint': '#EBE4EF',
+            mist: '#E9E1EE',
+            muted: '#5B4A55'
+          },
+          fontFamily: {
+            display: ['Georgia', '"Times New Roman"', 'serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Keyboard focus: aubergine on light sections, mustard on dark sections */
+    :focus-visible { outline: 3px solid #3A2632; outline-offset: 3px; }
+    .dark-zone :focus-visible { outline-color: #E2C792; }
+
+    /* BUTTON START: pill shape, serif italic, offset shadow, playful tilt */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 48px; padding: 0.6rem 1.75rem;
+      background: #C8B8D1; color: #3A2632;
+      font-family: Georgia, "Times New Roman", serif; font-style: italic; font-weight: 700; font-size: 1.125rem;
+      border: 2px solid #3A2632; border-radius: 999px;
+      box-shadow: 4px 4px 0 #3A2632; cursor: pointer;
+    }
+    .btn:active { transform: translate(2px, 2px); box-shadow: none; }
+    .dark-zone .btn { border-color: #C8B8D1; box-shadow: 4px 4px 0 #E2C792; }
+    .btn-dark { background: #3A2632; color: #E2C792; box-shadow: 4px 4px 0 #C8B8D1; }
+    .dark-zone nav a { color: #C8B8D1; }
+    .dark-zone nav a:hover { color: #F5F2EB; }
+    /* Highlighter stroke behind the result numbers */
+    .mark { background: linear-gradient(transparent 62%, #C8B8D1 62%); padding: 0 0.15em; }
+    /* BUTTON END */
+
+    /* Project fact lists */
+    .facts dt { font-weight: 700; color: #3A2632; margin-top: 1rem; }
+    .facts dt:first-child { margin-top: 0; }
+    .facts dd { margin: 0.25rem 0 0; color: #5B4A55; }
+
+    /* Form fields */
+    .field {
+      display: block; width: 100%; min-height: 44px; padding: 0.5rem 0.75rem;
+      background: #fff; color: #3A2632;
+      border: 2px solid #5B4A55; border-radius: 0.5rem;
+    }
+
+    /* Motion only for visitors who allow it */
+    @media (prefers-reduced-motion: no-preference) {
+      html { scroll-behavior: smooth; }
+      .btn { transition: transform 0.2s; }
+      .btn:hover { transform: translateY(-2px) rotate(-1.5deg); }
+    }
+  </style>
+</head>
+
+<body class="bg-paper text-ink font-sans text-base leading-relaxed">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-paper focus:p-3 focus:text-ink">Skip to main content</a>
+
+  <header class="bg-ink text-paper dark-zone border-b border-white/10">
+    <div class="max-w-5xl mx-auto px-5 py-2 flex flex-wrap items-center justify-between gap-x-6">
+      <a href="index.html" class="font-display text-lg font-bold min-h-11 inline-flex items-center">Mmokutimabasi Uttah</a>
+      <nav aria-label="Primary">
+        <ul class="flex flex-wrap gap-x-5 text-sm">
+          <li><a href="index.html#about" class="min-h-11 inline-flex items-center hover:underline underline-offset-4">About</a></li>
+          <li><a href="projects.html" class="min-h-11 inline-flex items-center hover:underline underline-offset-4">Projects</a></li>
+          <li><a href="index.html#writing" class="min-h-11 inline-flex items-center hover:underline underline-offset-4">Writing</a></li>
+          <li><a href="index.html#skills" class="min-h-11 inline-flex items-center hover:underline underline-offset-4">Skills</a></li>
+          <li><a href="index.html#contact" class="min-h-11 inline-flex items-center hover:underline underline-offset-4">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section id="top" aria-labelledby="hub-title" class="pt-10 pb-4">
+      <div class="max-w-5xl mx-auto px-5">
+        <h1 id="hub-title" class="font-display text-4xl md:text-6xl font-bold leading-tight">Projects</h1>
+        <p class="mt-4 text-lg md:text-xl max-w-2xl">Three deep dives and two quick stops. Pick one and nerd out.</p>
+      </div>
+    </section>
+    <section aria-label="Case studies" class="pt-10">
+      <div class="max-w-5xl mx-auto px-5 grid gap-8 md:grid-cols-3">
+        <article class="flex flex-col">
+          <img src="images/cover-luxcross.webp" width="1200" height="592" loading="lazy" alt="Luxcross home page showing Bags of the Day, with Chanel and Hermes listings" class="w-full aspect-[16/10] object-cover rounded-2xl border-2 border-ink object-left">
+          <h2 class="mt-4 font-display text-2xl font-bold text-ink">Luxcross</h2>
+          <p class="mt-2">Luxury bags that only sold in person in Dubai. I gave the website a voice, and buyers worldwide started finding it.</p>
+          <a href="luxcross.html" class="mt-2 min-h-11 inline-flex items-center font-bold text-ink underline underline-offset-4">Nerd out here</a>
+        </article>
+        <article class="flex flex-col">
+          <img src="images/cover-webuildx.webp" width="738" height="387" loading="lazy" alt="WebuildX logo with the line The builders behind the builders" class="w-full aspect-[16/10] object-cover rounded-2xl border-2 border-ink">
+          <h2 class="mt-4 font-display text-2xl font-bold text-ink">WebuildX</h2>
+          <p class="mt-2">An engineering talent company with no website at all. The team and I built it from scratch, created the copy and grew search through blog posts readers came back for.</p>
+          <a href="webuildx.html" class="mt-2 min-h-11 inline-flex items-center font-bold text-ink underline underline-offset-4">Nerd out here</a>
+        </article>
+        <article class="flex flex-col">
+          <img src="images/cover-orange-farm.webp" width="659" height="466" loading="lazy" alt="A farmer tending young plants in a greenhouse beside the words Farm without limits and the Orange Farm Tech logo" class="w-full aspect-[16/10] object-cover rounded-2xl border-2 border-ink">
+          <h2 class="mt-4 font-display text-2xl font-bold text-ink">Orange Farm Technologies</h2>
+          <p class="mt-2">A smart farm needed one site for buyers, investors and trainees. One month and a brief that keeps on giving.</p>
+          <a href="orange-farm.html" class="mt-2 min-h-11 inline-flex items-center font-bold text-ink underline underline-offset-4">Nerd out here</a>
+        </article>
+      </div>
+    </section>
+    <section aria-labelledby="quick-title" class="pt-16">
+      <div class="max-w-5xl mx-auto px-5">
+        <h2 id="quick-title" class="font-display text-3xl md:text-4xl font-bold text-ink">Quick stops</h2>
+        <div class="mt-8 grid gap-8 md:grid-cols-2 items-start">
+        <article>
+          <img src="images/cover-lynkk.webp" width="657" height="465" loading="lazy" alt="Three Lynkk branded t-shirts in white, purple and black on a lilac background" class="w-full aspect-[16/10] object-cover rounded-2xl border-2 border-ink">
+          <h3 class="mt-4 font-display text-2xl font-bold text-ink">Lynkk</h3>
+          <p class="mt-2">An early-stage fintech and web3 startup with no brand voice and readers new to digital payments. I created the content framework and voice from the ground up, then reshaped Medium articles for Instagram, X, LinkedIn and Discord. Audience engagement grew 80% in two months.</p>
+          <a href="https://medium.com/@lynkkhq" rel="noopener" class="mt-2 min-h-11 inline-flex items-center font-bold text-ink underline underline-offset-4">Read my Lynkk articles</a>
+        </article>
+        <article>
+          <img src="images/bettershared-pagespeed.webp" width="1200" height="613" loading="lazy" alt="PageSpeed report for a BetterShared article on mobile: performance 58, accessibility 99, best practices 96, SEO 92." class="w-full h-auto rounded-2xl border-2 border-ink">
+          <p class="mt-2 text-sm text-muted">Performance had a rough day, but look at that SEO score.</p>
+          <h3 class="mt-2 font-display text-2xl font-bold text-ink">BetterShared</h3>
+          <p class="mt-2">Contemporary African art for buyers who could not see the work in person. I created artist spotlights, product pages and blog posts, managed Shopify listings and supported the sale of at least 20 paintings.</p>
+          <a href="https://bettershared.co/blogs/resources-for-artists/digital-art-for-beginners-essential-tools-techniques-and-tips-to-get-started" rel="noopener" class="mt-2 min-h-11 inline-flex items-center font-bold text-ink underline underline-offset-4">Read my BetterShared article</a>
+        </article>
+        </div>
+      </div>
+    </section>
+    <section aria-label="Work with me" class="mt-16 bg-ink text-paper dark-zone">
+      <div class="max-w-5xl mx-auto px-5 py-10 flex justify-center">
+        <a href="index.html#contact" class="btn">Choose me</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-ink text-paper dark-zone">
+    <div class="max-w-5xl mx-auto px-5 py-8 text-sm">
+      <nav aria-label="Footer">
+        <ul class="flex flex-wrap gap-x-5">
+          <li><a href="index.html#about" class="min-h-11 inline-flex items-center underline underline-offset-4">About</a></li>
+          <li><a href="projects.html" class="min-h-11 inline-flex items-center underline underline-offset-4">Projects</a></li>
+          <li><a href="index.html#writing" class="min-h-11 inline-flex items-center underline underline-offset-4">Writing</a></li>
+          <li><a href="index.html#skills" class="min-h-11 inline-flex items-center underline underline-offset-4">Skills</a></li>
+          <li><a href="index.html#references" class="min-h-11 inline-flex items-center underline underline-offset-4">References</a></li>
+          <li><a href="index.html#contact" class="min-h-11 inline-flex items-center underline underline-offset-4">Contact</a></li>
+          <li><a href="#top" class="min-h-11 inline-flex items-center underline underline-offset-4">Back to top</a></li>
+        </ul>
+      </nav>
+      <div class="mt-4 flex flex-wrap items-center justify-between gap-x-6">
+        <p>© <span id="year">2026</span> Mmokutimabasi Uttah. All rights reserved.</p>
+        <a href="resume/Mmokutimabasi-Uttah-Resume.pdf" download class="min-h-11 inline-flex items-center underline underline-offset-4">Download resume</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Keep the footer year current
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

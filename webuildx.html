@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-NG">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WebuildX case study | Mmokutimabasi Uttah</title>
+  <meta name="description" content="How I built the WebuildX website from scratch and created the content that brought engineering clients through the door.">
+  <meta property="og:title" content="WebuildX case study | Mmokutimabasi Uttah">
+  <meta property="og:description" content="How I built the WebuildX website from scratch and created the content that brought engineering clients through the door.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#3A2632">
+  <!-- Empty favicon stops the browser requesting a missing file. Swap in your own later. -->
+  <link rel="icon" href="data:,">
+
+  <!-- Tailwind via CDN, pinned to an exact version -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    // Colour tokens. Deep aubergine and soft linen, with lilac and mustard accents.
+    // Lilac is too light for text or borders on linen, so it is used for buttons, nav links on dark areas, highlights and tints.
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: '#F5F2EB',
+            ink: '#3A2632',
+            lilac: '#C8B8D1',
+            mustard: '#E2C792',
+            'lilac-tint': '#EBE4EF',
+            mist: '#E9E1EE',
+            muted: '#5B4A55'
+          },
+          fontFamily: {
+            display: ['Georgia', '"Times New Roman"', 'serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Keyboard focus: aubergine on light sections, mustard on dark sections */
+    :focus-visible { outline: 3px solid #3A2632; outline-offset: 3px; }
+    .dark-zone :focus-visible { outline-color: #E2C792; }
+
+    /* BUTTON START: pill shape, serif italic, offset shadow, playful tilt */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 48px; padding: 0.6rem 1.75rem;
+      background: #C8B8D1; color: #3A2632;
+      font-family: Georgia, "Times New Roman", serif; font-style: italic; font-weight: 700; font-size: 1.125rem;
+      border: 2px solid #3A2632; border-radius: 999px;
+      box-shadow: 4px 4px 0 #3A2632; cursor: pointer;
+    }
+    .btn:active { transform: translate(2px, 2px); box-shadow: none; }
+    .dark-zone .btn { border-color: #C8B8D1; box-shadow: 4px 4px 0 #E2C792; }
+    .btn-dark { background: #3A2632; color: #E2C792; box-shadow: 4px 4px 0 #C8B8D1; }
+    .dark-zone nav a { color: #C8B8D1; }
+    .dark-zone nav a:hover { color: #F5F2EB; }
+    /* Highlighter stroke behind the result numbers */
+    .mark { background: linear-gradient(transparent 62%, #C8B8D1 62%); padding: 0 0.15em; }
+    /* BUTTON END */
+
+    /* Project fact lists */
+    .facts dt { font-weight: 700; color: #3A2632; margin-top: 1rem; }
+    .facts dt:first-child { margin-top: 0; }
+    .facts dd { margin: 0.25rem 0 0; color: #5B4A55; }
+
+    /* Form fields */
+    .field {
+      display: block; width: 100%; min-height: 44px; padding: 0.5rem 0.75rem;
+      background: #fff; color: #3A2632;
+      border: 2px solid #5B4A55; border-radius: 0.5rem;
+    }
+
+    /* Motion only for visitors who allow it */
+    @media (prefers-reduced-motion: no-preference) {
+      html { scroll-behavior: smooth; }
+      .btn { transition: transform 0.2s; }
+      .btn:hover { transform: translateY(-2px) rotate(-1.5deg); }
+    }
+  </style>
+</head>
+
+<body class="bg-paper text-ink font-sans text-base leading-relaxed">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-paper focus:p-3 focus:text-ink">Skip to main content</a>
+
+  <header class="bg-ink text-paper dark-zone border-b border-white/10">
+    <div class="max-w-5xl mx-auto px-5 py-2 flex flex-wrap items-center justify-between gap-x-6">
+      <a href="index.html" class="font-display text-lg font-bold min-h-11 inline-flex items-center">Mmokutimabasi Uttah</a>
+      <nav aria-label="Primary">
+        <ul class="flex flex-wrap gap-x-5 text-sm">
+          <li><a href="index.html#about" class="min-h-11 inline-flex items-center hover:underline underline-offset-4">About</a></li>
+          <li><a href="projects.html" class="min-h-11 inline-flex items-center hover:underline underline-offset-4">Projects</a></li>
+          <li><a href="index.html#writing" class="min-h-11 inline-flex items-center hover:underline underline-offset-4">Writing</a></li>
+          <li><a href="index.html#skills" class="min-h-11 inline-flex items-center hover:underline underline-offset-4">Skills</a></li>
+          <li><a href="index.html#contact" class="min-h-11 inline-flex items-center hover:underline underline-offset-4">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section id="top" aria-labelledby="case-title" class="pt-10 pb-4">
+      <div class="max-w-5xl mx-auto px-5">
+        <a href="projects.html" class="min-h-11 inline-flex items-center font-bold text-ink underline underline-offset-4">Back to Projects</a>
+        <h1 id="case-title" class="font-display text-4xl md:text-6xl font-bold leading-tight mt-2">WebuildX</h1>
+        <p class="mt-4 text-lg md:text-xl max-w-2xl">An engineering talent company with no website at all. The team and I built it from scratch and created the content that brought clients to its door.</p>
+        <p class="mt-2 text-sm text-muted">Lead Technical Writer and Website Builder. Client project, 2024 to 2025.</p>
+        <div class="mt-8 max-w-3xl"><img src="images/cover-webuildx.webp" width="738" height="387" alt="WebuildX logo with the line The builders behind the builders" class="w-full aspect-[16/10] object-cover rounded-2xl border-2 border-ink"></div>
+      </div>
+    </section>
+    <section aria-labelledby="context-title" class="pt-12">
+      <div class="max-w-5xl mx-auto px-5">
+        <h2 id="context-title" class="font-display text-3xl md:text-4xl font-bold text-ink">The Context</h2>
+        <p class="mt-4 max-w-prose">WebuildX calls itself the builders behind the builders. Companies bring a tech need, and WebuildX supplies the engineers to meet it, from software to product.</p>
+        <p class="mt-4 max-w-prose">When I arrived, there was no website. The service existed, but it had nowhere to live online.</p>
+      </div>
+    </section>
+    <section aria-labelledby="problem-title" class="pt-12">
+      <div class="max-w-5xl mx-auto px-5">
+        <h2 id="problem-title" class="font-display text-3xl md:text-4xl font-bold text-ink">The Core Problem</h2>
+        <p class="mt-4 max-w-prose">No site meant no search presence and no proof. WebuildX also had two audiences to win at once: engineers who judge the detail, and decision-makers who only want the problem solved.</p>
+      </div>
+    </section>
+    <section aria-labelledby="struggle-title" class="pt-12">
+      <div class="max-w-5xl mx-auto px-5">
+        <h2 id="struggle-title" class="font-display text-3xl md:text-4xl font-bold text-ink">The Struggle</h2>
+        <p class="mt-4 max-w-prose">Talent supply is a crowded niche, and it sounds like every other recruiter. The copy had to be clear to engineers and executives alike, and it started with no content, no keyword history and no data.</p>
+      </div>
+    </section>
+    <section aria-labelledby="execution-title" class="pt-12">
+      <div class="max-w-5xl mx-auto px-5">
+        <h2 id="execution-title" class="font-display text-3xl md:text-4xl font-bold text-ink">The Execution</h2>
+        <ol class="mt-4 max-w-prose list-decimal pl-5 space-y-3">
+          <li><span class="font-bold">Build around the offer.</span> I structured the site around what WebuildX sells and how it delivers, then built it in Framer.</li>
+          <li><span class="font-bold">Choose keywords with evidence.</span> Ahrefs and the Semrush tracker showed what buyers search for. Google Analytics then showed how readers behaved, so I could sharpen the list.</li>
+          <li><span class="font-bold">Create copy for two readers.</span> Website, landing page and campaign copy speak plainly to non-technical buyers and keep the detail technical readers want.</li>
+          <li><span class="font-bold">Keep readers coming back.</span> Blog posts built audience retention. I then reshaped the best ideas for Medium, Instagram, LinkedIn and X.</li>
+          <li><span class="font-bold">Keep everyone on message.</span> I reviewed performance with Google Analytics, Zutrix and Yoast, and worked with product, support, design and marketing so the message stayed consistent.</li>
+        </ol>
+        <p class="mt-4 max-w-prose"><span class="font-bold">Tools:</span> Ahrefs, Semrush, Google Analytics, Zutrix, Yoast and Framer.</p>
+      </div>
+    </section>
+    <section aria-labelledby="win-title" class="pt-12">
+      <div class="max-w-5xl mx-auto px-5">
+        <h2 id="win-title" class="font-display text-3xl md:text-4xl font-bold text-ink">The Win</h2>
+        <p class="mt-4 max-w-prose">WebuildX went from no website to a front door that works, and a number of clients arrived through it. Within a year, over three clients received an engineering team and saw their projects delivered.</p>
+        <p class="mt-4 max-w-prose">The blog earned attention too. A post on managing remote teams drew 261 claps and 3 comments on Medium, and the three posts shown here collected 362 claps between them.</p>
+      </div>
+    </section>
+    <section aria-label="Evidence" class="pt-8">
+      <div class="max-w-5xl mx-auto px-5 grid gap-6 sm:grid-cols-2">
+        <figure><img src="images/webuildx-medium.webp" width="800" height="902" loading="lazy" alt="WebuildX Medium page listing three posts: Create Your Business Plan in 2025 with 9 Essential Tips, 51 claps; How to Build a Strong Digital Presence for Your Brand, 50 claps; Managing Remote Teams: Key Strategies for Success, 261 claps and 3 comments." class="w-full h-auto rounded-lg border-2 border-ink"><figcaption class="mt-2 text-sm text-muted">The WebuildX Medium page.</figcaption></figure>
+      </div>
+      <div class="max-w-5xl mx-auto px-5 mt-6"><a href="projects.html" class="min-h-11 inline-flex items-center font-bold text-ink underline underline-offset-4">See all projects</a></div>
+    </section>
+    <section aria-label="Work with me" class="mt-16 bg-ink text-paper dark-zone">
+      <div class="max-w-5xl mx-auto px-5 py-10 flex justify-center">
+        <a href="index.html#contact" class="btn">Choose me</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-ink text-paper dark-zone">
+    <div class="max-w-5xl mx-auto px-5 py-8 text-sm">
+      <nav aria-label="Footer">
+        <ul class="flex flex-wrap gap-x-5">
+          <li><a href="index.html#about" class="min-h-11 inline-flex items-center underline underline-offset-4">About</a></li>
+          <li><a href="projects.html" class="min-h-11 inline-flex items-center underline underline-offset-4">Projects</a></li>
+          <li><a href="index.html#writing" class="min-h-11 inline-flex items-center underline underline-offset-4">Writing</a></li>
+          <li><a href="index.html#skills" class="min-h-11 inline-flex items-center underline underline-offset-4">Skills</a></li>
+          <li><a href="index.html#references" class="min-h-11 inline-flex items-center underline underline-offset-4">References</a></li>
+          <li><a href="index.html#contact" class="min-h-11 inline-flex items-center underline underline-offset-4">Contact</a></li>
+          <li><a href="#top" class="min-h-11 inline-flex items-center underline underline-offset-4">Back to top</a></li>
+        </ul>
+      </nav>
+      <div class="mt-4 flex flex-wrap items-center justify-between gap-x-6">
+        <p>© <span id="year">2026</span> Mmokutimabasi Uttah. All rights reserved.</p>
+        <a href="resume/Mmokutimabasi-Uttah-Resume.pdf" download class="min-h-11 inline-flex items-center underline underline-offset-4">Download resume</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Keep the footer year current
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
